@@ -9,7 +9,7 @@ import tensorflow as tf
 import time
 # Create your views here.
 def home(request):
-    model = tf.keras.models.load_model(os.path.abspath(os.getcwd()+"/model.h5"))
+    model = tf.keras.models.load_model("./static/model.h5")
     print(os.path.exists(os.path.abspath(os.getcwd()+"/model.h5") ))
     def preprocess_image(image_path, target_size=(225, 225)):
         img = load_img(image_path, target_size=target_size)
